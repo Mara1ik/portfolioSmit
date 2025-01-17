@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+%font {
+  color: #000;
+  letter-spacing: 0.55rem;
+  font: {
+    family: "Poppins", sans-serif;
+    weight: 400;
+    style: normal;
+    size: 14rem;
+  }
+}
+
+%h {
+  margin: 0;
+}
+
+%button {
+  @extend %font;
+  font: {
+    size: 14rem;
+    weight: 700;
+  }
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+html {
+  font-size: calc(1vw / 19.2);
+}
+
+body {
+  @extend %font;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 800rem;
+  background-color: #bce5f9;
+  box-shadow: 0 4rem 4rem 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    content: "";
+    width: 820rem;
+    height: 800rem;
+    background-image: url(./Background.png);
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 903rem;
+  }
+
+  &__container {
+    min-width: 1140rem;
+    border: 1px solid #000;
+    padding-top: 206rem;
+  }
+
+  &__name {
+    font: {
+      size: 16rem;
+      weight: 700;
+    }
+    line-height: 24rem;
+    position: relative;
+    margin-left: 10rem;
+
+    &::before {
+      content: "";
+      width: 36rem;
+      height: 36rem;
+      border-radius: 100%;
+      background-color: #ffa501;
+      position: absolute;
+      margin: auto -11rem;
+      top: 0;
+      bottom: 0;
+      text-align: center;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    @extend %h;
+    font: {
+      weight: 700;
+      size: 48rem;
+    }
+    line-height: 60rem;
+    max-width: 532rem;
+    margin-top: 9rem;
+  }
+
+  &__buttons {
+    margin-top: 32rem;
+
+    &-portfolio,
+    &-about {
+      @extend %button;
+      width: 135rem;
+      height: 45rem;
+    }
+
+    &-portfolio {
+      background: #ffa501;
+      box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.15);
+    }
+  }
+}

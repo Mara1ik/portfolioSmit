@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+body, .header__buttons-portfolio, .header__buttons-about {
+  color: #000;
+  letter-spacing: 0.55rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14rem;
+}
+
+.header__title {
+  margin: 0;
+}
+
+.header__buttons-portfolio, .header__buttons-about {
+  font-size: 14rem;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+html {
+  font-size: 0.0520833333vw;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 800rem;
+  background-color: #bce5f9;
+  box-shadow: 0 4rem 4rem 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+.header::after {
+  content: "";
+  width: 820rem;
+  height: 800rem;
+  background-image: url(./Background.png);
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  left: 903rem;
+}
+.header__container {
+  min-width: 1140rem;
+  border: 1px solid #000;
+  padding-top: 206rem;
+}
+.header__name {
+  font-size: 16rem;
+  font-weight: 700;
+  line-height: 24rem;
+  position: relative;
+  margin-left: 10rem;
+}
+.header__name::before {
+  content: "";
+  width: 36rem;
+  height: 36rem;
+  border-radius: 100%;
+  background-color: #ffa501;
+  position: absolute;
+  margin: auto -11rem;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: -1;
+}
+.header__title {
+  font-weight: 700;
+  font-size: 48rem;
+  line-height: 60rem;
+  max-width: 532rem;
+  margin-top: 9rem;
+}
+.header__buttons {
+  margin-top: 32rem;
+}
+.header__buttons-portfolio, .header__buttons-about {
+  width: 135rem;
+  height: 45rem;
+}
+.header__buttons-portfolio {
+  background: #ffa501;
+  box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.15);
+}/*# sourceMappingURL=style.css.map */
