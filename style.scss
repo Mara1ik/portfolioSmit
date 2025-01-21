@@ -9,7 +9,7 @@ h3 {
   letter-spacing: 0.55rem;
   font: {
     family: "Poppins", sans-serif;
-    weight: 400;
+    weight: 700;
     style: normal;
     size: 14rem;
   }
@@ -17,16 +17,15 @@ h3 {
 
 %container {
   width: 1140rem;
+  box-sizing: border-box;
   border: 1px solid #000;
+  border-top: none;
+  border-bottom: none;
   z-index: 1;
 }
 
 %button {
   @extend %font;
-  font: {
-    size: 14rem;
-    weight: 700;
-  }
   border: none;
   background: transparent;
   padding: 0;
@@ -41,13 +40,31 @@ h3 {
   padding: 12rem 25rem;
 }
 
+%circle {
+  content: "";
+  width: 36rem;
+  height: 36rem;
+  background: #ffa501;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+%line {
+  content: "";
+  width: 60rem;
+  height: 1rem;
+  background-color: #ffa501;
+  position: absolute;
+}
+
 html {
   font-size: calc(1vw / 19.2);
 }
 
 body {
   @extend %font;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   margin: 0;
   padding: 0;
 }
@@ -86,10 +103,7 @@ body {
 
     &-title {
       margin-right: 85rem;
-      font: {
-        size: 16rem;
-        weight: 700;
-      }
+      font-size: 16rem;
 
       &::after {
         content: "";
@@ -117,38 +131,27 @@ body {
 
   &__container {
     @extend %container;
+    border-top: 1rem solid #000;
     padding-top: 206rem;
   }
 
   &__name {
-    font: {
-      size: 16rem;
-      weight: 700;
-    }
+    font-size: 16rem;
     line-height: 24rem;
     position: relative;
     margin-left: 10rem;
 
     &::before {
-      content: "";
-      width: 36rem;
-      height: 36rem;
-      border-radius: 100%;
-      background-color: #ffa501;
-      position: absolute;
+      @extend %circle;
       margin: auto -11rem;
       top: 0;
       bottom: 0;
       text-align: center;
-      z-index: -1;
     }
   }
 
   &__title {
-    font: {
-      weight: 700;
-      size: 48rem;
-    }
+    font-size: 48rem;
     line-height: 60rem;
     max-width: 532rem;
     margin-top: 9rem;
@@ -185,6 +188,261 @@ body {
       &:nth-child(2) {
         width: 36rem;
       }
+    }
+  }
+}
+
+.useful {
+  height: 700rem;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    @extend %container;
+    border-top: none;
+    padding: 70rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__subtitle {
+    font-size: 16rem;
+    line-height: 24rem;
+    position: relative;
+
+    &::before {
+      @extend %circle;
+      left: 5rem;
+      top: -6rem;
+    }
+  }
+
+  &__title {
+    font-size: 36rem;
+    line-height: 60rem;
+    margin-top: 6rem;
+    margin-bottom: 85rem;
+    position: relative;
+
+    &::after {
+      @extend %line;
+      left: 152.5rem;
+      bottom: -21rem;
+    }
+  }
+
+  &__topics {
+    width: 1140rem;
+    display: flex;
+    gap: 185rem;
+  }
+
+  .topic-education {
+    margin-left: 115rem;
+  }
+
+  &__topic {
+    width: 375rem;
+
+    &-title {
+      font-size: 20rem;
+      line-height: 30rem;
+      margin-bottom: 45rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 15rem;
+        height: 15rem;
+        background: #ffa501;
+        border-radius: 100%;
+        position: absolute;
+        top: 9rem;
+        left: -50rem;
+      }
+
+      &::after {
+        content: "";
+        width: 1rem;
+        height: 343rem;
+        background: #000;
+        position: absolute;
+        top: 24rem;
+        left: -42.5rem;
+      }
+    }
+  }
+
+  .item {
+    margin-bottom: 50rem;
+    position: relative;
+
+    &::before {
+      @extend %circle;
+    }
+
+    &::after {
+      content: "";
+      width: 42rem;
+      height: 1rem;
+      background: #000;
+      position: absolute;
+      top: 18rem;
+      left: -42rem;
+    }
+
+    &__img {
+      display: block;
+      width: 25rem;
+      height: 25rem;
+      position: absolute;
+      top: 14rem;
+      left: 17.5rem;
+    }
+
+    &__title {
+      line-height: 21rem;
+      margin-left: 56rem;
+    }
+
+    &__subtitle {
+      font-size: 12rem;
+      font-weight: 500;
+      line-height: 18rem;
+      margin-left: 56rem;
+      margin-bottom: 12rem;
+    }
+
+    &__text {
+      font-weight: 500;
+      font-size: 12rem;
+      line-height: 18rem;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    @extend %container;
+    height: 692rem;
+    border-bottom: 1rem solid #000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 520rem;
+  }
+
+  &__img {
+    display: block;
+    width: 400rem;
+    height: 600rem;
+    position: absolute;
+    left: 52rem;
+  }
+
+  &__subtitle {
+    font-size: 16rem;
+    line-height: 24rem;
+    margin: 6rem 12rem 6rem;
+
+    &::before {
+      @extend %circle;
+      top: 0;
+      left: 520rem;
+    }
+  }
+
+  &__title {
+    font-size: 36rem;
+    line-height: 60rem;
+    position: relative;
+
+    &::after {
+      @extend %line;
+      top: 60rem;
+      left: 0;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 25rem;
+    margin-bottom: 20rem;
+
+    &-title {
+      line-height: 21rem;
+      margin-top: 24rem;
+      margin-bottom: 20rem;
+    }
+
+    &-a {
+      display: block;
+      width: 30rem;
+      height: 30rem;
+    }
+
+    &-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25rem;
+    position: relative;
+
+    &-title {
+      margin-bottom: 30rem;
+    }
+
+    &-label {
+      font-size: 12rem;
+      font-weight: 500;
+      height: 18rem;
+      padding: 0 8rem;
+      display: flex;
+      justify-content: center;
+      background-color: #ffffff;
+      position: absolute;
+    }
+
+    .label-name {
+      top: -9rem;
+      left: 9rem;
+    }
+
+    .label-email {
+      top: -9rem;
+      left: 317rem;
+    }
+
+    .label-message {
+      top: 66rem;
+      left: 9rem;
+    }
+
+    &-input {
+      box-sizing: border-box;
+      width: 280rem;
+      height: 45rem;
+      border: 1rem solid #000000;
+    }
+
+    .textarea {
+      width: 585rem;
+      height: 190rem;
+      margin-top: 6rem;
+    }
+    &-submit {
+      margin-top: 1rem;
+      @extend %orange-button;
     }
   }
 }

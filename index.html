@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -45,10 +45,131 @@
         <h3 class="useful__subtitle">Опыт</h3>
         <h2 class="useful__title">Чем я буду полезна</h2>
         <div class="useful__topics">
-          <div class="useful__topic">
+          <div class="useful__topic topic-education">
             <div class="useful__topic-title">Образование</div>
-            ul.
+            <div class="item">
+              <img
+                class="item__img"
+                src="./img/UniversityIcon.svg"
+                alt="Университет"
+              />
+              <div class="item__title">МГТУ им. Н. Э. Баумана</div>
+              <div class="item__subtitle">
+                Диплом магистра | Москва (2014-2020)
+              </div>
+              <div class="item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmo.
+              </div>
+            </div>
+            <div class="item">
+              <img class="item__img" src="./img/CoursesIcon.svg" alt="Курсы" />
+              <div class="item__title">Udemy</div>
+              <div class="item__subtitle">Курсы по Web-разработке</div>
+              <div class="item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmo.
+              </div>
+            </div>
           </div>
+          <div class="useful__topic topic-experience">
+            <div class="useful__topic-title">Опыт работы</div>
+            <div class="item">
+              <img
+                class="item__img"
+                src="./img/DeveloperIcon.svg"
+                alt="Разработчик"
+              />
+              <div class="item__title">Front-End Developer</div>
+              <div class="item__subtitle">EPAM | Москва (2018-2019)</div>
+              <div class="item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmo.
+              </div>
+            </div>
+            <div class="item">
+              <img
+                class="item__img"
+                src="./img/DesignerIcon.svg"
+                alt="Дизайнер"
+              />
+              <div class="item__title">UI/UX Designer</div>
+              <div class="item__subtitle">Squad Team | Москва (2018)</div>
+              <div class="item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmo.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="contact__container">
+        <img class="contact__img" src="./img/Photo.png" alt="Фото" />
+        <div class="contact__subtitle">Контакты</div>
+        <div class="contact__title">Свяжитесь со мной</div>
+        <div class="contact__links-title">Любым удобным для вас способом:</div>
+        <div class="contact__links">
+          <a href="https://facebook.com/" class="contact__links-a">
+            <img
+              class="contact__links-img"
+              src="./img/FacebookIcon.svg"
+              alt="Facebook"
+          /></a>
+          <a href="https://web.telegram.org/" class="contact__links-a">
+            <img
+              class="contact__links-img"
+              src="./img/TelegramIcon.svg"
+              alt="Telegram"
+          /></a>
+          <a href="https://instagram.com/" class="contact__links-a">
+            <img
+              class="contact__links-img"
+              src="./img/InstagramIcon.svg"
+              alt="Instagram"
+          /></a>
+        </div>
+        <div class="contact__form-title">
+          Или оставьте ваши данные и я сама вам напишу:
+        </div>
+        <div class="contact__form">
+          <label class="contact__form-label label-name" for="name">Ваше имя</label>
+          <input
+            class="contact__form-input"
+            type="text"
+            id="name"
+            name="name"
+            required
+          />
+          <label class="contact__form-label label-email" for="email">Ваша почта</label>
+          <input
+            class="contact__form-input"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+          <label class="contact__form-label label-message" for="message"
+            >Ваше сообщение</label
+          >
+          <textarea
+            class="contact__form-input textarea"
+            id="message"
+            name="message"
+            rows="5"
+            cols="33"
+            required
+          ></textarea>
+          <button class="contact__form-submit">Отправить сообщение</button>
         </div>
       </div>
     </section>

@@ -4,24 +4,25 @@ h3 {
   margin: 0;
 }
 
-body, .header__buttons-about, .header__buttons-portfolio {
+body, .header__buttons-about, .contact__form-submit, .header__buttons-portfolio {
   color: #000;
   letter-spacing: 0.55rem;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-size: 14rem;
 }
 
-.header__container {
+.contact__container, .useful__container, .header__container {
   width: 1140rem;
+  box-sizing: border-box;
   border: 1px solid #000;
+  border-top: none;
+  border-bottom: none;
   z-index: 1;
 }
 
-.header__buttons-about, .header__buttons-portfolio {
-  font-size: 14rem;
-  font-weight: 700;
+.header__buttons-about, .contact__form-submit, .header__buttons-portfolio {
   border: none;
   background: transparent;
   padding: 0;
@@ -29,10 +30,28 @@ body, .header__buttons-about, .header__buttons-portfolio {
   padding: 12rem 25rem;
 }
 
-.header__buttons-portfolio {
+.contact__form-submit, .header__buttons-portfolio {
   background: #ffa501;
   box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.15);
   padding: 12rem 25rem;
+}
+
+.contact__subtitle::before, .useful .item::before, .useful__subtitle::before, .header__name::before {
+  content: "";
+  width: 36rem;
+  height: 36rem;
+  background: #ffa501;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.contact__title::after, .useful__title::after {
+  content: "";
+  width: 60rem;
+  height: 1rem;
+  background-color: #ffa501;
+  position: absolute;
 }
 
 html {
@@ -40,7 +59,7 @@ html {
 }
 
 body {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   margin: 0;
   padding: 0;
 }
@@ -79,7 +98,6 @@ body {
 .header__socials-title {
   margin-right: 85rem;
   font-size: 16rem;
-  font-weight: 700;
 }
 .header__socials-title::after {
   content: "";
@@ -101,30 +119,22 @@ body {
   height: 100%;
 }
 .header__container {
+  border-top: 1rem solid #000;
   padding-top: 206rem;
 }
 .header__name {
   font-size: 16rem;
-  font-weight: 700;
   line-height: 24rem;
   position: relative;
   margin-left: 10rem;
 }
 .header__name::before {
-  content: "";
-  width: 36rem;
-  height: 36rem;
-  border-radius: 100%;
-  background-color: #ffa501;
-  position: absolute;
   margin: auto -11rem;
   top: 0;
   bottom: 0;
   text-align: center;
-  z-index: -1;
 }
 .header__title {
-  font-weight: 700;
   font-size: 48rem;
   line-height: 60rem;
   max-width: 532rem;
@@ -154,4 +164,213 @@ body {
 }
 .header__burger-line:nth-child(2) {
   width: 36rem;
+}
+
+.useful {
+  height: 700rem;
+  display: flex;
+  justify-content: center;
+}
+.useful__container {
+  border-top: none;
+  padding: 70rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.useful__subtitle {
+  font-size: 16rem;
+  line-height: 24rem;
+  position: relative;
+}
+.useful__subtitle::before {
+  left: 5rem;
+  top: -6rem;
+}
+.useful__title {
+  font-size: 36rem;
+  line-height: 60rem;
+  margin-top: 6rem;
+  margin-bottom: 85rem;
+  position: relative;
+}
+.useful__title::after {
+  left: 152.5rem;
+  bottom: -21rem;
+}
+.useful__topics {
+  width: 1140rem;
+  display: flex;
+  gap: 185rem;
+}
+.useful .topic-education {
+  margin-left: 115rem;
+}
+.useful__topic {
+  width: 375rem;
+}
+.useful__topic-title {
+  font-size: 20rem;
+  line-height: 30rem;
+  margin-bottom: 45rem;
+  position: relative;
+}
+.useful__topic-title::before {
+  content: "";
+  width: 15rem;
+  height: 15rem;
+  background: #ffa501;
+  border-radius: 100%;
+  position: absolute;
+  top: 9rem;
+  left: -50rem;
+}
+.useful__topic-title::after {
+  content: "";
+  width: 1rem;
+  height: 343rem;
+  background: #000;
+  position: absolute;
+  top: 24rem;
+  left: -42.5rem;
+}
+.useful .item {
+  margin-bottom: 50rem;
+  position: relative;
+}
+.useful .item::after {
+  content: "";
+  width: 42rem;
+  height: 1rem;
+  background: #000;
+  position: absolute;
+  top: 18rem;
+  left: -42rem;
+}
+.useful .item__img {
+  display: block;
+  width: 25rem;
+  height: 25rem;
+  position: absolute;
+  top: 14rem;
+  left: 17.5rem;
+}
+.useful .item__title {
+  line-height: 21rem;
+  margin-left: 56rem;
+}
+.useful .item__subtitle {
+  font-size: 12rem;
+  font-weight: 500;
+  line-height: 18rem;
+  margin-left: 56rem;
+  margin-bottom: 12rem;
+}
+.useful .item__text {
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 18rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+.contact__container {
+  height: 692rem;
+  border-bottom: 1rem solid #000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 520rem;
+}
+.contact__img {
+  display: block;
+  width: 400rem;
+  height: 600rem;
+  position: absolute;
+  left: 52rem;
+}
+.contact__subtitle {
+  font-size: 16rem;
+  line-height: 24rem;
+  margin: 6rem 12rem 6rem;
+}
+.contact__subtitle::before {
+  top: 0;
+  left: 520rem;
+}
+.contact__title {
+  font-size: 36rem;
+  line-height: 60rem;
+  position: relative;
+}
+.contact__title::after {
+  top: 60rem;
+  left: 0;
+}
+.contact__links {
+  display: flex;
+  gap: 25rem;
+  margin-bottom: 20rem;
+}
+.contact__links-title {
+  line-height: 21rem;
+  margin-top: 24rem;
+  margin-bottom: 20rem;
+}
+.contact__links-a {
+  display: block;
+  width: 30rem;
+  height: 30rem;
+}
+.contact__links-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.contact__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25rem;
+  position: relative;
+}
+.contact__form-title {
+  margin-bottom: 30rem;
+}
+.contact__form-label {
+  font-size: 12rem;
+  font-weight: 500;
+  height: 18rem;
+  padding: 0 8rem;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  position: absolute;
+}
+.contact__form .label-name {
+  top: -9rem;
+  left: 9rem;
+}
+.contact__form .label-email {
+  top: -9rem;
+  left: 317rem;
+}
+.contact__form .label-message {
+  top: 66rem;
+  left: 9rem;
+}
+.contact__form-input {
+  box-sizing: border-box;
+  width: 280rem;
+  height: 45rem;
+  border: 1rem solid #000000;
+}
+.contact__form .textarea {
+  width: 585rem;
+  height: 190rem;
+  margin-top: 6rem;
+}
+.contact__form-submit {
+  margin-top: 1rem;
 }/*# sourceMappingURL=style.css.map */
