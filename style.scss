@@ -428,6 +428,28 @@ body {
       left: 9rem;
     }
 
+    &-validation {
+      color: red;
+      font-size: 12rem;
+      font-weight: 400;
+      position: absolute;
+    }
+
+    .validation-name {
+      top: 45rem;
+      left: 9rem;
+    }
+
+    .validation-email {
+      top: 45rem;
+      left: 317rem;
+    }
+
+    .validation-message {
+      top: 265rem;
+      left: 9rem;
+    }
+
     &-input {
       box-sizing: border-box;
       width: 280rem;
@@ -439,6 +461,7 @@ body {
       width: 585rem;
       height: 190rem;
       margin-top: 6rem;
+      padding-top: 5rem;
     }
     &-submit {
       margin-top: 1rem;

@@ -141,23 +141,27 @@
         <div class="contact__form-title">
           Или оставьте ваши данные и я сама вам напишу:
         </div>
-        <div class="contact__form">
-          <label class="contact__form-label label-name" for="name">Ваше имя</label>
+        <form class="contact__form">
+          <label class="contact__form-label label-name" for="name"
+            >Ваше имя</label
+          >
           <input
             class="contact__form-input"
             type="text"
             id="name"
             name="name"
-            required
           />
-          <label class="contact__form-label label-email" for="email">Ваша почта</label>
+          <span class="contact__form-validation validation-name"></span>
+          <label class="contact__form-label label-email" for="email"
+            >Ваша почта</label
+          >
           <input
             class="contact__form-input"
-            type="email"
+            type="text"
             id="email"
             name="email"
-            required
           />
+          <span class="contact__form-validation validation-email"></span>
           <label class="contact__form-label label-message" for="message"
             >Ваше сообщение</label
           >
@@ -167,11 +171,14 @@
             name="message"
             rows="5"
             cols="33"
-            required
           ></textarea>
-          <button class="contact__form-submit">Отправить сообщение</button>
-        </div>
+          <span class="contact__form-validation validation-message"></span>
+          <button class="contact__form-submit" type="submit">
+            Отправить сообщение
+          </button>
+        </form>
       </div>
     </section>
   </body>
+  <script src="script.js"></script>
 </html>

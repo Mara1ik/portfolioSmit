@@ -360,6 +360,24 @@ body {
   top: 66rem;
   left: 9rem;
 }
+.contact__form-validation {
+  color: red;
+  font-size: 12rem;
+  font-weight: 400;
+  position: absolute;
+}
+.contact__form .validation-name {
+  top: 45rem;
+  left: 9rem;
+}
+.contact__form .validation-email {
+  top: 45rem;
+  left: 317rem;
+}
+.contact__form .validation-message {
+  top: 265rem;
+  left: 9rem;
+}
 .contact__form-input {
   box-sizing: border-box;
   width: 280rem;
@@ -370,6 +388,7 @@ body {
   width: 585rem;
   height: 190rem;
   margin-top: 6rem;
+  padding-top: 5rem;
 }
 .contact__form-submit {
   margin-top: 1rem;
