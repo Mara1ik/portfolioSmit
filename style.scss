@@ -92,6 +92,12 @@ body {
   z-index: 10;
   display: none;
 
+  @media (max-width: 320px) {
+    width: 250rem;
+    padding-left: 20rem;
+    padding-top: 120rem;
+  }
+
   &__cross {
     position: absolute;
     top: 33rem;
@@ -147,6 +153,11 @@ body {
     gap: 15rem;
     margin-top: 300rem;
     margin-left: 90rem;
+
+    @media (max-width: 320px) {
+      margin-top: 140rem;
+      margin-left: 60rem;
+    }
   }
 }
 
@@ -590,6 +601,18 @@ body {
       }
     }
 
+    .label-checkbox {
+      display: none;
+      @media (max-width: 320px) {
+        display: block;
+        top: 307rem;
+        left: 95rem;
+        span {
+          color: #2306d6;
+        }
+      }
+    }
+
     &-validation {
       color: red;
       font-size: 12rem;
@@ -624,6 +647,15 @@ body {
       }
     }
 
+    .validation-checkbox {
+      display: none;
+      @media (max-width: 320px) {
+        display: block;
+        top: 307rem;
+        left: 90rem !important;
+      }
+    }
+
     &-input {
       box-sizing: border-box;
       width: 280rem;
@@ -632,6 +664,14 @@ body {
 
       @media (max-width: 320px) {
         width: 300rem;
+      }
+    }
+
+    &-checkbox {
+      display: none;
+      @media (max-width: 320px) {
+        display: block;
+        margin-right: 150rem;
       }
     }
 

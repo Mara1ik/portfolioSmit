@@ -8,19 +8,23 @@ form.method = "POST";
 const nameInput = form.querySelector("#name");
 const emailInput = form.querySelector("#email");
 const messageInput = form.querySelector("#message");
+const checkboxInput = form.querySelector("#checkbox");
 const nameValidation = form.querySelector(".validation-name");
 const emailValidation = form.querySelector(".validation-email");
 const messageValidation = form.querySelector(".validation-message");
+const checkboxValidation = form.querySelector(".validation-checkbox");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let nameStatus,
     emailStatus,
-    messageStatus = false;
+    messageStatus,
+    checkboxStatus = false;
 
   const name = nameInput.value;
   const email = emailInput.value;
   const message = messageInput.value;
+  const checkbox = checkboxInput.checked;
 
   if (!name) {
     nameValidation.textContent = "Введите ваше имя";
@@ -46,7 +50,15 @@ form.addEventListener("submit", (e) => {
     messageStatus = true;
   }
 
-  if (nameStatus && emailStatus && messageStatus) {
+  if (!checkbox) {
+    checkboxValidation.textContent = "*";
+    checkboxStatus = false;
+  } else {
+    checkboxValidation.textContent = "";
+    checkboxStatus = true;
+  }
+
+  if (nameStatus && emailStatus && messageStatus && checkboxStatus) {
     form.submit();
   }
 });
@@ -64,6 +76,7 @@ const experienceLink = document.querySelector("#experienceLink");
 const contactLink = document.querySelector("#contactLink");
 
 const openNavBar = () => {
+  document.body.style.overflow = "hidden";
   navBar.style.display = "block";
   header.style.opacity = 0.25;
   headerContainer.style.border = "none";
@@ -72,6 +85,7 @@ const openNavBar = () => {
 };
 
 const closeNavBar = () => {
+  document.body.style.overflow = "";
   navBar.style.display = "none";
   header.style.opacity = 1;
   headerContainer.style.cssText =
@@ -83,14 +97,17 @@ const closeNavBar = () => {
 
 const scroll = (height) => {
   closeNavBar();
-  window.scrollTo(0, height / (1920 / window.innerWidth));
+  const deafultWidth = window.innerWidth <= 320 ? 320 : 1920;
+  window.scrollTo(0, height / (deafultWidth / window.innerWidth));
 };
 
 burgerBut.addEventListener("click", openNavBar);
 crossBut.addEventListener("click", closeNavBar);
 experienceLink.addEventListener("click", () => {
-  scroll(800);
+  const height = window.innerWidth <= 320 ? 640 : 800;
+  scroll(height);
 });
 contactLink.addEventListener("click", () => {
-  scroll(1600);
+  const height = window.innerWidth <= 320 ? 1890 : 1600;
+  scroll(height);
 });

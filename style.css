@@ -89,6 +89,13 @@ body {
   z-index: 10;
   display: none;
 }
+@media (max-width: 320px) {
+  .navbar {
+    width: 250rem;
+    padding-left: 20rem;
+    padding-top: 120rem;
+  }
+}
 .navbar__cross {
   position: absolute;
   top: 33rem;
@@ -138,6 +145,12 @@ body {
   gap: 15rem;
   margin-top: 300rem;
   margin-left: 90rem;
+}
+@media (max-width: 320px) {
+  .navbar__links {
+    margin-top: 140rem;
+    margin-left: 60rem;
+  }
 }
 
 .header {
@@ -535,6 +548,19 @@ body {
     top: 137rem;
   }
 }
+.contact__form .label-checkbox {
+  display: none;
+}
+@media (max-width: 320px) {
+  .contact__form .label-checkbox {
+    display: block;
+    top: 307rem;
+    left: 95rem;
+  }
+  .contact__form .label-checkbox span {
+    color: #2306d6;
+  }
+}
 .contact__form-validation {
   color: red;
   font-size: 12rem;
@@ -568,6 +594,16 @@ body {
     top: 289rem;
   }
 }
+.contact__form .validation-checkbox {
+  display: none;
+}
+@media (max-width: 320px) {
+  .contact__form .validation-checkbox {
+    display: block;
+    top: 307rem;
+    left: 90rem !important;
+  }
+}
 .contact__form-input {
   box-sizing: border-box;
   width: 280rem;
@@ -577,6 +613,15 @@ body {
 @media (max-width: 320px) {
   .contact__form-input {
     width: 300rem;
+  }
+}
+.contact__form-checkbox {
+  display: none;
+}
+@media (max-width: 320px) {
+  .contact__form-checkbox {
+    display: block;
+    margin-right: 150rem;
   }
 }
 .contact__form .textarea {
